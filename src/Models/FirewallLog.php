@@ -90,4 +90,11 @@ class FirewallLog extends Model
 		return $this->belongsTo(\Firewall::getModelRecord());
 	}
 
+	/**
+	 * Restrict our URL attribute.
+	 * @param string $input
+	 */
+	public function setUrlAttribute(string $input) : void {
+		$this->attributes['url'] = substr($input, 0, min(strleN($input), 2802));
+	}
 }
