@@ -1,0 +1,55 @@
+{
+    "name": "crumbls/laravel-firewall",
+    "description": "A whitelist/blacklist package for Laravel & Filament.",
+    "keywords": [
+        "Crumbls",
+        "Projects",
+        "Laravel",
+        "Filament",
+        "Firewall",
+        "Whitelist",
+        "Blacklist"
+    ],
+    "homepage": "https://github.com/Crumbls/laravel-firewall",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Chase C. Miller",
+            "email": "chase@crumbls.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.0",
+        "laravel/framework": "^9.0"
+    },
+    "require-dev": {
+    },
+    "autoload": {
+        "psr-4": {
+            "Crumbls\\Firewall\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Crumbls\\Firewall\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/pest",
+        "test-coverage": "vendor/bin/pest --coverage",
+        "format": "vendor/bin/php-cs-fixer fix --allow-risky=yes"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Crumbls\\Firewall\\FirewallServiceProvider"
+      ]
+    }
+  }
+}
